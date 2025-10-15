@@ -3,250 +3,584 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leorus Studios | Cinematic Videographer</title>
+    <title>Leorus Studios | Capturing Motion. Crafting Emotion.</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
-<body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <video autoplay muted loop class="video-bg">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-in-the-middle-of-a-forest-1085-large.mp4" type="video/mp4">
-        </video>
-        <div class="hero-content">
-            <h1>Leorus Studios</h1>
-            <p>Capturing Stories Frame by Frame</p>
-            <a href="#portfolio" class="btn">View Portfolio</a>
+<body class="bg-[#0a0a0a] text-white">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 nav-hidden bg-[#0a0a0a]/90 backdrop-blur-md py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold font-['Playfair_Display']">Leorus Studios</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-[#d4af37] transition-colors">Home</a>
+                <a href="#about" class="hover:text-[#d4af37] transition-colors">About</a>
+                <a href="#portfolio" class="hover:text-[#d4af37] transition-colors">Portfolio</a>
+                <a href="#services" class="hover:text-[#d4af37] transition-colors">Services</a>
+                <a href="#contact" class="hover:text-[#d4af37] transition-colors">Contact</a>
+            </div>
+            <button class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
         </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen relative flex items-center justify-center overflow-hidden">
+        <div class="light-flare"></div>
+        <div class="hero-overlay"></div>
+        <video autoplay muted loop class="hero-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-road-in-a-forest-4089-large.mp4" type="video/mp4">
+        </video>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 font-['Playfair_Display']">Leorus Studios</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto">Capturing Motion. Crafting Emotion.</p>
+            <a href="#portfolio" class="btn-primary inline-block">View Our Work</a>
+        </div>
+        <div class="scroll-arrow"></div>
     </section>
 
     <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text" data-aos="fade-right">
-                    <h2>About Me</h2>
-                    <p>I'm Leorus Studios, a passionate visual storyteller with over 8 years of experience in cinematography and photography. My journey began in the mountains of Colorado, where I first discovered my love for capturing the raw beauty of nature.</p>
-                    <p>Today, I specialize in creating cinematic narratives for brands, documentaries, and creative projects. My approach combines technical expertise with artistic vision to produce compelling visuals that resonate with audiences.</p>
-                    <p>When I'm not behind the camera, you'll find me hiking remote trails or experimenting with new editing techniques. I believe that every frame tells a story, and I'm dedicated to telling yours with authenticity and artistry.</p>
+    <section id="about" class="section-padding">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 fade-in">
+                    <h2 class="text-4xl font-bold mb-6 font-['Playfair_Display']">Our Story</h2>
+                    <p class="text-lg mb-6 text-gray-300">
+                        Leorus Studios is a mobile-first cinematography brand dedicated to visual storytelling. 
+                        We believe that every moment has a story worth telling, and we use the power of mobile 
+                        photography and cinematography to capture those stories in their most authentic form.
+                    </p>
+                    <p class="text-lg mb-6 text-gray-300">
+                        Our approach combines technical expertise with artistic vision, creating visuals that 
+                        not only document but evoke genuine emotion. From intimate portraits to dynamic event 
+                        coverage, we transform ordinary moments into cinematic experiences.
+                    </p>
+                    <div class="flex space-x-4 mt-8">
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 rounded-full bg-[#d4af37] mr-2"></div>
+                            <span>Mobile-First Approach</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 rounded-full bg-[#2dd4bf] mr-2"></div>
+                            <span>Cinematic Storytelling</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="portrait" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Leorus Studios Portrait">
+                <div class="md:w-1/2 fade-in">
+                    <div class="relative rounded-xl overflow-hidden">
+                        <img src="images/Stanely.jpg" 
+                             alt="Behind the scenes at Leorus Studios" 
+                             class="w-42 h-42 rounded-x">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <h2 class="section-title">Featured Work</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-aos="fade-up">
-                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Mountain Adventure">
-                    <div class="portfolio-overlay">
-                        <h3>Alpine Dreams</h3>
-                        <p>Documentary film exploring mountain culture in the Swiss Alps</p>
-                        <a href="#" class="btn">View Project</a>
+    <!-- Replace the entire portfolio section with this code -->
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="section-padding bg-[#050505] relative overflow-hidden">
+    <!-- Animated background elements -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-[#d4af37] blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-1/3 right-1/4 w-96 h-96 rounded-full bg-[#2dd4bf] blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+    </div>
+    
+    <div class="container mx-auto px-6 relative z-10">
+        <h2 class="text-4xl font-bold text-center mb-4 font-['Playfair_Display']">Visual Stories</h2>
+        <p class="text-xl text-center mb-16 text-gray-400 max-w-2xl mx-auto">A cinematic journey through moments captured and emotions crafted</p>
+        
+        <!-- Interactive Filter Tabs -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button class="filter-btn active px-6 py-3 rounded-full bg-[#d4af37] text-black font-semibold transition-all duration-300 hover:scale-105" data-filter="all">All Works</button>
+            <button class="filter-btn px-6 py-3 rounded-full bg-transparent border border-gray-600 text-white font-semibold transition-all duration-300 hover:bg-white/10 hover:scale-105" data-filter="photography">Photography</button>
+            <button class="filter-btn px-6 py-3 rounded-full bg-transparent border border-gray-600 text-white font-semibold transition-all duration-300 hover:bg-white/10 hover:scale-105" data-filter="cinematography">Cinematography</button>
+            <button class="filter-btn px-6 py-3 rounded-full bg-transparent border border-gray-600 text-white font-semibold transition-all duration-300 hover:bg-white/10 hover:scale-105" data-filter="events">Events</button>
+        </div>
+        
+        <!-- Cinematic Film Reel Container -->
+        <div class="cinematic-reel relative">
+            <!-- Film Strip Borders -->
+            <div class="film-border-top absolute top-0 left-0 w-full h-8 bg-black z-20 opacity-90">
+                <div class="film-perforations flex justify-between px-4 h-full items-center">
+                    <div class="w-12 h-1 bg-gray-600 rounded-full"></div>
+                    <div class="w-12 h-1 bg-gray-600 rounded-full"></div>
+                    <div class="w-12 h-1 bg-gray-600 rounded-full"></div>
+                    <div class="w-12 h-1 bg-gray-600 rounded-full"></div>
+                    <div class="w-12 h-1 bg-gray-600 rounded-full"></div>
+                    <div class="w-12 h-1 bg-gray-600 rounded-full"></div>
+                </div>
+            </div>
+            
+            <div class="film-border-bottom absolute bottom-0 left-0 w-full h-8 bg-black z-20 opacity-90">
+                <div class="film-perforations flex justify-between px-4 h-full items-center">
+                    <div class="w-12 h-1 bg-gray-600 rounded-full"></div>
+                    <div class="w-12 h-1 bg-gray-600 rounded-full"></div>
+                    <div class="w-12 h-1 bg-gray-600 rounded-full"></div>
+                    <div class="w-12 h-1 bg-gray-600 rounded-full"></div>
+                    <div class="w-12 h-1 bg-gray-600 rounded-full"></div>
+                    <div class="w-12 h-1 bg-gray-600 rounded-full"></div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Items Grid -->
+            <div class="portfolio-reel grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8 pb-8">
+                <!-- Portfolio Item 1 - Video -->
+                <div class="portfolio-item fade-in cinematography" data-type="cinematography">
+                    <div class="aspect-video relative overflow-hidden rounded-lg group cursor-pointer">
+                        <video class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" muted loop preload="metadata">
+                            <source src="images/vid1.mp4" type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+                            <div class="p-6 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                                <h3 class="text-xl font-bold mb-2">Ocean Dreams</h3>
+                                <p class="text-gray-300 mb-4">Cinematic Seascape</p>
+                                <div class="flex items-center space-x-2">
+                                    <span class="flex items-center text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        Video
+                                    </span>
+                                    <span class="text-sm text-gray-400">2:30</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/70 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1475738147590-8f8a5d4d6a45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Urban Photography">
-                    <div class="portfolio-overlay">
-                        <h3>City Rhythms</h3>
-                        <p>Time-lapse photography capturing urban energy in New York</p>
-                        <a href="#" class="btn">View Project</a>
+                
+                <!-- Portfolio Item 2 - Image -->
+                <div class="portfolio-item fade-in photography" data-type="photography">
+                    <div class="aspect-[4/5] relative overflow-hidden rounded-lg group cursor-pointer">
+                        <img src="images/img2.jpg" 
+                             alt="Urban Exploration" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+                            <div class="p-6 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                                <h3 class="text-xl font-bold mb-2">Urban Exploration</h3>
+                                <p class="text-gray-300 mb-4">Cityscape Photography</p>
+                                <div class="flex items-center space-x-2">
+                                    <span class="flex items-center text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                        Photo
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1519996521437-7eabc7c0a8d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Ocean Waves">
-                    <div class="portfolio-overlay">
-                        <h3>Ocean Symphony</h3>
-                        <p>Cinematic drone footage of coastal landscapes in Portugal</p>
-                        <a href="#" class="btn">View Project</a>
+                <!-- Portfolio Item 2 - Image -->
+                <div class="portfolio-item fade-in photography" data-type="photography">
+                    <div class="aspect-[4/5] relative overflow-hidden rounded-lg group cursor-pointer">
+                        <img src="images/img3.jpg" 
+                             alt="Urban Exploration" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+                            <div class="p-6 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                                <h3 class="text-xl font-bold mb-2">Urban Exploration</h3>
+                                <p class="text-gray-300 mb-4">Cityscape Photography</p>
+                                <div class="flex items-center space-x-2">
+                                    <span class="flex items-center text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                        Photo
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item" data-aos="fade-up">
-                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Northern Lights">
-                    <div class="portfolio-overlay">
-                        <h3>Aurora Nights</h3>
-                        <p>Astrophotography series capturing the Northern Lights in Iceland</p>
-                        <a href="#" class="btn">View Project</a>
+
+                <!-- Portfolio Item 2 - Image -->
+                <div class="portfolio-item fade-in photography" data-type="photography">
+                    <div class="aspect-[4/5] relative overflow-hidden rounded-lg group cursor-pointer">
+                        <img src="images/img4.jpg" 
+                             alt="Urban Exploration" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+                            <div class="p-6 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                                <h3 class="text-xl font-bold mb-2">Urban Exploration</h3>
+                                <p class="text-gray-300 mb-4">Cityscape Photography</p>
+                                <div class="flex items-center space-x-2">
+                                    <span class="flex items-center text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                        Photo
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Desert Landscape">
-                    <div class="portfolio-overlay">
-                        <h3>Desert Mirage</h3>
-                        <p>Cinematic short film exploring the beauty of desert landscapes</p>
-                        <a href="#" class="btn">View Project</a>
+
+                <!-- Portfolio Item 2 - Image -->
+                <div class="portfolio-item fade-in photography" data-type="photography">
+                    <div class="aspect-[4/5] relative overflow-hidden rounded-lg group cursor-pointer">
+                        <img src="images/img5.jpg" 
+                             alt="Urban Exploration" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+                            <div class="p-6 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                                <h3 class="text-xl font-bold mb-2">Urban Exploration</h3>
+                                <p class="text-gray-300 mb-4">Cityscape Photography</p>
+                                <div class="flex items-center space-x-2">
+                                    <span class="flex items-center text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                        Photo
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Forest Pathway">
-                    <div class="portfolio-overlay">
-                        <h3>Forest Whispers</h3>
-                        <p>Nature documentary showcasing biodiversity in Pacific Northwest</p>
-                        <a href="#" class="btn">View Project</a>
+
+                <!-- Portfolio Item 2 - Image -->
+                <div class="portfolio-item fade-in photography" data-type="photography">
+                    <div class="aspect-[4/5] relative overflow-hidden rounded-lg group cursor-pointer">
+                        <img src="images/img6.jpg" 
+                             alt="Urban Exploration" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+                            <div class="p-6 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                                <h3 class="text-xl font-bold mb-2">Urban Exploration</h3>
+                                <p class="text-gray-300 mb-4">Cityscape Photography</p>
+                                <div class="flex items-center space-x-2">
+                                    <span class="flex items-center text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                        Photo
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 - Image -->
+                <div class="portfolio-item fade-in photography" data-type="photography">
+                    <div class="aspect-[4/5] relative overflow-hidden rounded-lg group cursor-pointer">
+                        <img src="images/img7.jpg" 
+                             alt="Urban Exploration" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+                            <div class="p-6 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                                <h3 class="text-xl font-bold mb-2">Urban Exploration</h3>
+                                <p class="text-gray-300 mb-4">Cityscape Photography</p>
+                                <div class="flex items-center space-x-2">
+                                    <span class="flex items-center text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                        Photo
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 - Image -->
+                <div class="portfolio-item fade-in photography" data-type="photography">
+                    <div class="aspect-[4/5] relative overflow-hidden rounded-lg group cursor-pointer">
+                        <img src="images/img8.jpg" 
+                             alt="Urban Exploration" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+                            <div class="p-6 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                                <h3 class="text-xl font-bold mb-2">Urban Exploration</h3>
+                                <p class="text-gray-300 mb-4">Cityscape Photography</p>
+                                <div class="flex items-center space-x-2">
+                                    <span class="flex items-center text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                        Photo
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 - Image -->
+                <div class="portfolio-item fade-in photography" data-type="photography">
+                    <div class="aspect-[4/5] relative overflow-hidden rounded-lg group cursor-pointer">
+                        <img src="images/img1.jpg" 
+                             alt="Urban Exploration" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+                            <div class="p-6 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                                <h3 class="text-xl font-bold mb-2">Urban Exploration</h3>
+                                <p class="text-gray-300 mb-4">Cityscape Photography</p>
+                                <div class="flex items-center space-x-2">
+                                    <span class="flex items-center text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                        Photo
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 - Video
+                <div class="portfolio-item fade-in events" data-type="events">
+                    <div class="aspect-video relative overflow-hidden rounded-lg group cursor-pointer">
+                        <video class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" muted loop preload="metadata">
+                            <source src="https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4" type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+                            <div class="p-6 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                                <h3 class="text-xl font-bold mb-2">Forest Light</h3>
+                                <p class="text-gray-300 mb-4">Nature Cinematography</p>
+                                <div class="flex items-center space-x-2">
+                                    <span class="flex items-center text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                        </svg>
+                                        Video
+                                    </span>
+                                    <span class="text-sm text-gray-400">1:45</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/70 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                 -->
+                <!-- Portfolio Item 4 - Image -->
+                <div class="portfolio-item fade-in photography" data-type="photography">
+                    <div class="aspect-[4/5] relative overflow-hidden rounded-lg group cursor-pointer">
+                        <img src="images/img10.jpg" 
+                             alt="Golden Hour" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+                            <div class="p-6 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                                <h3 class="text-xl font-bold mb-2">Golden Hour</h3>
+                                <p class="text-gray-300 mb-4">Portrait Session</p>
+                                <div class="flex items-center space-x-2">
+                                    <span class="flex items-center text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                        Photo
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 - Video
+                <div class="portfolio-item fade-in events" data-type="events">
+                    <div class="aspect-video relative overflow-hidden rounded-lg group cursor-pointer">
+                        <video class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" muted loop preload="metadata">
+                            <source src="https://assets.mixkit.co/videos/preview/mixkit-footage-of-a-wedding-ceremony-41063-large.mp4" type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+                            <div class="p-6 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                                <h3 class="text-xl font-bold mb-2">Eternal Vows</h3>
+                                <p class="text-gray-300 mb-4">Wedding Cinematography</p>
+                                <div class="flex items-center space-x-2">
+                                    <span class="flex items-center text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                        </svg>
+                                        Video
+                                    </span>
+                                    <span class="text-sm text-gray-400">3:15</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/70 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- Portfolio Item 6 - Image -->
+                <div class="portfolio-item fade-in photography" data-type="photography">
+                    <div class="aspect-[4/5] relative overflow-hidden rounded-lg group cursor-pointer">
+                        <img src="images/img9.jpg" 
+                             alt="Mountainscape" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
+                            <div class="p-6 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                                <h3 class="text-xl font-bold mb-2">Mountainscape</h3>
+                                <p class="text-gray-300 mb-4">Adventure Photography</p>
+                                <div class="flex items-center space-x-2">
+                                    <span class="flex items-center text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                        Photo
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        
+        <!-- View More Button -->
+        <div class="text-center mt-12">
+            <button class="px-8 py-3 border border-[#d4af37] text-[#d4af37] rounded-full font-semibold transition-all duration-300 hover:bg-[#d4af37] hover:text-black hover:scale-105">
+                Explore Full Portfolio
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
 
     <!-- Services Section -->
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Services</h2>
-            <div class="services-grid">
-                <div class="service-card" data-aos="zoom-in">
+    <section id="services" class="section-padding">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 font-['Playfair_Display']">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card fade-in text-center">
                     <div class="service-icon">
-                        <i class="fas fa-video"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                        </svg>
                     </div>
-                    <h3>Cinematography</h3>
-                    <p>Professional video production for commercials, documentaries, and creative projects with cinematic quality.</p>
+                    <h3 class="text-xl font-bold mb-4">Event Cinematography</h3>
+                    <p class="text-gray-300">Capturing your special moments with cinematic flair, from weddings to corporate events.</p>
                 </div>
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                
+                <!-- Service 2 -->
+                <div class="service-card fade-in text-center">
                     <div class="service-icon">
-                        <i class="fas fa-camera"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
                     </div>
-                    <h3>Photography</h3>
-                    <p>Stunning photography services for landscapes, portraits, events, and commercial campaigns.</p>
+                    <h3 class="text-xl font-bold mb-4">Mobile Portrait Sessions</h3>
+                    <p class="text-gray-300">Professional portrait photography using cutting-edge mobile technology.</p>
                 </div>
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                
+                <!-- Service 3 -->
+                <div class="service-card fade-in text-center">
                     <div class="service-icon">
-                        <i class="fas fa-film"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                        </svg>
                     </div>
-                    <h3>Post-Production</h3>
-                    <p>Expert color grading, editing, and visual effects to bring your footage to life.</p>
+                    <h3 class="text-xl font-bold mb-4">Music Video Shoots</h3>
+                    <p class="text-gray-300">Creating visually stunning music videos that amplify your artistic vision.</p>
                 </div>
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                
+                <!-- Service 4 -->
+                <div class="service-card fade-in text-center">
                     <div class="service-icon">
-                        <i class="fas fa-drone"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9m0 9c-5 0-9-4-9-9s4-9 9-9" />
+                        </svg>
                     </div>
-                    <h3>Aerial Videography</h3>
-                    <p>Breathtaking drone footage to capture unique perspectives of landscapes and locations.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Client Testimonials</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial active">
-                    <div class="quote-icon">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <p>"Alex transformed our brand story into a visual masterpiece. His attention to detail and creative vision brought our concept to life in ways we couldn't have imagined. The final product exceeded all our expectations."</p>
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Sarah Johnson">
-                        </div>
-                        <div class="client-name">
-                            <h4>Sarah Johnson</h4>
-                            <p>Marketing Director, Adventure Co.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="quote-icon">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <p>"Working with Alex was an absolute pleasure. His ability to capture the essence of our documentary subject was remarkable. The footage he produced was not only visually stunning but emotionally resonant."</p>
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Michael Chen">
-                        </div>
-                        <div class="client-name">
-                            <h4>Michael Chen</h4>
-                            <p>Producer, Nature Films</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="quote-icon">
-                        <i class="fas fa-quote-left"></i>
-                    </div>
-                    <p>"The wedding film Alex created for us was beyond anything we could have hoped for. He captured every special moment with such artistry and sensitivity. We'll treasure this film for the rest of our lives."</p>
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80" alt="Emma Rodriguez">
-                        </div>
-                        <div class="client-name">
-                            <h4>Emma Rodriguez</h4>
-                            <p>Bride, Wedding Client</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-nav">
-                    <div class="nav-dot active"></div>
-                    <div class="nav-dot"></div>
-                    <div class="nav-dot"></div>
+                    <h3 class="text-xl font-bold mb-4">Brand & Lifestyle Content</h3>
+                    <p class="text-gray-300">Elevating your brand with compelling visual content that tells your story.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-wrapper">
-                <div class="contact-form" data-aos="fade-right">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" required>
+    <section id="contact" class="section-padding bg-[#050505]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 font-['Playfair_Display']">Get In Touch</h2>
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2 fade-in">
+                    <h3 class="text-2xl font-bold mb-6">Let's Create Something Amazing Together</h3>
+                    <p class="text-gray-300 mb-8">
+                        Ready to bring your vision to life? Contact us to discuss your project, 
+                        ask questions, or schedule a consultation. We're excited to hear about 
+                        your creative ideas and help you tell your story through stunning visuals.
+                    </p>
+                    <div class="mb-8">
+                        <h4 class="text-xl font-bold mb-4">Connect With Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.441 16.892c-2.102.144-6.784.144-8.883 0-2.276-.156-2.541-1.27-2.558-4.892.017-3.629.285-4.736 2.558-4.892 2.099-.144 6.782-.144 8.883 0 2.277.156 2.541 1.27 2.559 4.892-.018 3.629-.285 4.736-2.559 4.892zm-6.441-7.234l4.917 2.338-4.917 2.346v-4.684z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                </svg>
+                            </a>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
-                <div class="social-links" data-aos="fade-left">
-                    <h3>Connect With Me</h3>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-vimeo-v"></i>
-                        </a>
                     </div>
+                </div>
+                <div class="lg:w-1/2 fade-in">
+                    <form class="contact-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <input type="text" placeholder="Subject">
+                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn-primary w-full">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Leorus Studios Visuals. All Rights Reserved.</p>
+    <footer class="py-8 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">© 2023 Leorus Studios. All rights reserved.</p>
         </div>
     </footer>
-    <script src="index.js"></script>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button id="lightbox-close" class="lightbox-close">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <img id="lightbox-img" src="" alt="" class="lightbox-img">
+        </div>
+    </div>
+
+      <script src="script.js"></script>
 </body>
 </html>
