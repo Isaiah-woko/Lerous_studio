@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
+
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -378,12 +379,12 @@
             </div>
         </div>
         
-        <!-- View More Button -->
+        <!-- View More Button
         <div class="text-center mt-12">
             <button class="px-8 py-3 border border-[#d4af37] text-[#d4af37] rounded-full font-semibold transition-all duration-300 hover:bg-[#d4af37] hover:text-black hover:scale-105">
                 Explore Full Portfolio
             </button>
-        </div>
+        </div> -->
     </div>
 </section>
 
@@ -472,7 +473,7 @@
                 <div class="space-y-4">
                     <div class="flex items-center">
                         <i class="fas fa-envelope text-[#d4af37] mr-4"></i>
-                        <span>contact@leorusstudios.com</span>
+                        <span>Leorusstudios@gmail.com</span>
                     </div>
                     <div class="flex items-center">
                         <i class="fas fa-phone text-[#d4af37] mr-4"></i>
@@ -485,25 +486,57 @@
                 </div>
             </div>
             <div class="lg:w-1/2 fade-in">
-                <form class="contact-form">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <input type="text" placeholder="Subject">
-                    <textarea rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn-primary w-full">
-                        <i class="fas fa-paper-plane mr-2"></i>Send Message
-                    </button>
-                </form>
+    <form id="contactForm" class="contact-form">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <input type="text" id="name" placeholder="Your Name" required class="w-full">
+                <span class="text-red-400 text-sm hidden" id="nameError">Please enter your name</span>
             </div>
+            <div>
+                <input type="email" id="email" placeholder="Your Email" required class="w-full">
+                <span class="text-red-400 text-sm hidden" id="emailError">Please enter a valid email</span>
+            </div>
+        </div>
+        <div class="mb-6 mt-5">
+            <input type="text" id="subject" placeholder="Subject" class="w-full">
+        </div>
+        <div class="mb-6">
+            <textarea id="message" rows="5" placeholder="Your Message" required class="w-full"></textarea>
+            <span class="text-red-400 text-sm hidden" id="messageError">Please enter your message</span>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row gap-4">
+            <!-- Email via FormSubmit (Fast & Free) -->
+            <button type="submit" class="btn-primary flex-1 flex items-center justify-center">
+                <i class="fas fa-envelope mr-2"></i>Send via Email
+            </button>
+            
+            <!-- WhatsApp Option -->
+            <button type="button" id="whatsappBtn" class="bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex-1 flex items-center justify-center">
+                <i class="fab fa-whatsapp mr-2"></i>Send via WhatsApp
+            </button>
+        </div>
+        
+        <!-- Success Message -->
+        <div id="successMessage" class="mt-4 p-4 bg-green-900/30 border border-green-600 rounded-lg text-green-300 hidden">
+            <i class="fas fa-check-circle mr-2"></i>Message sent successfully! We'll get back to you soon.
+        </div>
+    </form>
+</div>
+
+
+
         </div>
     </div>
 </section>
+
     <!-- Footer -->
     <footer class="py-8 border-t border-gray-800">
         <div class="container mx-auto px-6 text-center">
-            <p class="text-gray-400">© 2025 Leorus Studios. All rights reserved.</p>
+            <p class="text-sm md:text-base">
+            &copy; <span id="currentYear"></span> Leorus Studios. All rights reserved.
+            | Designed with <i class="fas fa-heart text-[#e63946]"></i> by <a href="https://www.facebook.com/isaiah.woko/" class="hover:underline">Isaiah Woko</a>
+          </p>
         </div>
     </footer>
 
