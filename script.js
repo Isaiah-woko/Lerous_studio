@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function() {
     submitBtn.disabled = true;
 
     // Using FormSubmit.co
-    fetch("https://formsubmit.co/ajax/6af3dd6f37c1d0cb334a1f43f7f5b60f", {
+    fetch("https://formsubmit.co/ajax/Leorusstudios@gmail.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
