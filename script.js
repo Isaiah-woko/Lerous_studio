@@ -248,7 +248,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 5000);
   });
 });
-
 document.addEventListener("DOMContentLoaded", function() {
   const mobileMenuButton = document.getElementById("mobileMenuButton");
   const closeMobileMenu = document.getElementById("closeMobileMenu");
@@ -261,20 +260,11 @@ document.addEventListener("DOMContentLoaded", function() {
     mobileMenu.classList.toggle("active");
     document.body.classList.toggle("no-scroll");
 
-    // Change hamburger to close icon when menu is open
-    if (mobileMenu.classList.contains("active")) {
-      mobileMenuButton.innerHTML = `
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                `;
-    } else {
-      mobileMenuButton.innerHTML = `
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                `;
-    }
+    // --- [REMOVED] ---
+    // The code that changed the hamburger icon's innerHTML
+    // was removed from here. It's not needed because you
+    // have a separate close button (closeMobileMenu).
+    // --- [REMOVED] ---
   }
 
   // Open mobile menu
@@ -314,7 +304,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  // Navigation scroll effect (existing code)
+  // Navigation scroll effect
   let lastScrollTop = 0;
   window.addEventListener("scroll", function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -331,7 +321,7 @@ document.addEventListener("DOMContentLoaded", function() {
     lastScrollTop = scrollTop;
   });
 
-  // Smooth scrolling for desktop navigation (existing code)
+  // Smooth scrolling for desktop navigation
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function(e) {
       // Skip if it's a mobile nav link (handled above)
